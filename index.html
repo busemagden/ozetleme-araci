@@ -71,13 +71,14 @@
     function summarizeText() {
         var text = document.getElementById('inputText').value;
         // Backend'e istek göndermek için burada bir API çağrısı yapılacak
-        fetch('https://your-heroku-app-name.herokuapp.com/summarize', {
+        fetch('https://3c309a49-0a7f-48af-b813-3432bbf3abe4-00-2mvh6wgetv6h6.pike.replit.dev/summarize', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ text: text })
         })
+
         .then(response => response.json())
         .then(data => {
             document.getElementById('summaryText').textContent = data.summary;
